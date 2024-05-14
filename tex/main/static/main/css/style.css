@@ -1,0 +1,59 @@
+body {
+    background: ##00ffff
+}
+
+/* static/styles.css */
+.form-field {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+input {
+    width: 200px; /* Установить ширину всех полей ввода текста на 200 пикселей */
+}
+
+main .features {
+    float: center;
+    color: #fff;
+    margin-top: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+main .features h1 {font-size: 50px;}
+main .features p {max-width: 400px; margin: 20px auto}
+
+aside img {
+    width: 100px;
+}
+aside {
+    float: left; # расположение блока
+    background: #181818;
+    width: 20% # ширина блока
+    padding: 5%; # внутренние отступы
+    height: 100%; # высота блока 100% высоты экрана
+    color: #fff;
+    border-right: 5px solid #4d4d4d; # обводка по правой стороне
+}
+aside ul {
+    list-style: none; /* Убираем маркеры списка */
+}
+
+aside ul li {
+    margin-top: 20px;
+    transition: font-size 0.6s ease; /* Плавное изменение размера текста */
+}
+
+aside ul a {
+    text-decoration: none; /* Убираем стандартное подчеркивание ссылок */
+    color: inherit; /* Унаследовать цвет текста от родительского элемента */
+}
+aside ul li:hover,
+aside ul a:hover {
+    color: #eb5959; /* Смена цвета при наведении */
+    font-size: 1.1em; /* Увеличение размера текста на 10% при наведении */
+}

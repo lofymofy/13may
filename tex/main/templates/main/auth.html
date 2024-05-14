@@ -1,0 +1,18 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Авторизация{% endblock %}
+{% block content %}
+    <h2>Авторизация</h2>
+    <form method="post">
+        {% csrf_token %}
+        <div>
+            {{ form.non_field_errors }}
+        </div>
+        {% for el in form %}
+        <div class="form-field"><p><label for="{{ el.id_for_label }}">{{ el.label }}</label>{{ el }}</p></div>
+        <p>{{ el.errors }}</p>
+        {% endfor %}
+
+        <button type="submit">Подтвердить</button>
+    </form>
+{% endblock %}

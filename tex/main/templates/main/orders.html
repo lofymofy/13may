@@ -1,0 +1,22 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Заявки{% endblock %}
+
+{% block content %}
+    <div>
+        <h1>Магазин</h1>
+        <h3>Заказ продуктов</h3>
+        <p>Сервис для заказа товаров «Авоська» представляет собой информационную
+            систему для заказа товаров со склада компании.</p>
+    </div>
+    <div>
+        {% for el in tovars %}
+        <div class="d-flex flex-row">
+            <h2>{{ el.name }}</h2>
+            <a href="{% url 'create' el.id %}"><button class="btn btn-info">Добавить</button></a>
+        </div>
+
+         {% endfor %}
+    </div>
+
+{% endblock %}
